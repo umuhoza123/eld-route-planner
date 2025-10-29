@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-k01f6o5h$8p9hd0d@2v+8qds*@muh7g+)nz-tg0jhji-7t^^_j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']  # Allow all hosts for now
 
 
 # Application definition
@@ -129,6 +129,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'https://eld-route-planne-mqrluax1i-blandine-umuhozas-projects.vercel.app/',  # Add your Vercel URL
+    'https://*.vercel.app',  # Allow all Vercel preview URLs
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True  # For testing, remove in production
 
 CORS_ALLOW_CREDENTIALS = True
